@@ -35,7 +35,7 @@
     
     .wrapper{
         /* border: 1px solid black; */
-        
+        height: auto;
         width: auto;
         box-sizing: border-box;
         font-family: 'poppins';
@@ -101,96 +101,3 @@
     }
     
     </style>
-
-
-
-<!-- penia -->
-
-// nuxt.config.js
-export default defineNuxtConfig({
-  modules: [
-    '@pinia/nuxt',
-  ],
-});
-
-
-// store/cart.js
-<!-- import { defineStore } from 'pinia';
-
-export const useCartStore = defineStore('cart', {
-  state: () => ({
-    items: [],
-    totalQuantity: 0,
-    totalPrice: 0,
-  }),
-
-  actions: {
-    // Add a product to the cart
-    async addProduct(product) {
-      // Check for existing item
-      const existingItem = this.items.find((item) => item.id === product.id);
-
-      if (existingItem) {
-        existingItem.quantity++;
-      } else {
-        this.items.push({
-          id: product.id,
-          name: product.name,
-          price: product.price,
-          quantity: 1,
-          image: product.image, // Assuming a product image property
-        });
-      }
-
-      this.updateTotals();
-    },
-
-    // Remove a product from the cart
-    async removeProduct(productId) {
-      this.items = this.items.filter((item) => item.id !== productId);
-      this.updateTotals();
-    },
-
-    // Update product quantity
-    async updateQuantity(productId, quantity) {
-      const productIndex = this.items.findIndex((item) => item.id === productId);
-      this.items[productIndex].quantity = quantity;
-      this.updateTotals();
-    },
-
-    // Clear the cart
-    clearCart() {
-      this.items = [];
-      this.totalQuantity = 0;
-      this.totalPrice = 0;
-    },
-
-    // Recalculate totals
-    updateTotals() {
-      this.totalQuantity = this.items.reduce((sum, item) => sum + item.quantity, 0);
-      this.totalPrice = this.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    },
-  },
-});
-
-
-<template>
-    <div>
-      <p>Total items: {{ cartStore.totalQuantity }}</p>
-      <p>Total price: {{ cartStore.totalPrice }}</p>
-    </div>
-  </template>
-  
-  <script>
-  import { useCartStore } from '~/stores/cart';
-  
-  export default {
-    setup() {
-      const cartStore = useCartStore();
-  
-      return {
-        cartStore,
-      };
-    },
-  };
-  </script> -->

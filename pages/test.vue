@@ -2,7 +2,8 @@
     <div>
 <!-- <ProductCard/>
 <LargeProductCard/> -->
-<fullCampaign/>
+<!-- <fullCampaign/> -->
+<FullPageCampaign/>
     <!-- 
     <halfCampaign/> -->
     </div>
